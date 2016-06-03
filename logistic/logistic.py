@@ -6,7 +6,7 @@ Database: https://archive.ics.uci.edu/ml/datasets/Spambase
 """
 
 import numpy as np
-from sklearn import svm
+from sklearn import linear_model
 import matplotlib.pyplot as plt
 
 def LogisticRegression(training, testing):
@@ -17,11 +17,11 @@ def LogisticRegression(training, testing):
     X = training[:,0:56] # Data
     y = training[:,57] # Class Label
     Z = testing[:,0:56] # Testing set
-    logistic = svm.SVC()
-    print(linear.fit(X,y))
+    logistic = linear_model.LogisticRegression()
+    print(logistic.fit(X,y))
     
-    print(linear.decision_function)
-    result = linear.predict(X)
+    print(logistic.decision_function)
+    result = logistic.predict(X)
     
     correct = 0
     incorrect = 0
@@ -37,8 +37,8 @@ def LogisticRegression(training, testing):
     print("Accuracy: " + str(correct/(correct+incorrect)))    
     
     
-    linear.fit(X,y)
-    result = linear.predict(Z)    
+    logistic.fit(X,y)
+    result = logistic.predict(Z)    
     
     correct = 0
     incorrect = 0
