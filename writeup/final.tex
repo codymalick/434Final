@@ -46,7 +46,9 @@ some simple, some more complex, that all involve sorting a given set of items in
 two or more classifications. The goal, of course, being able to quickly and efficiently
 classify large sets of items into their correct classes. In our final project, we
 have examined four seperate classification algorithms, and applied them all to the
-same problem of classifying spam.
+same problem of classifying spam. The algorithms we cover are linear regression,
+logistic regression, support vector machine, and decision tree. Before we jump
+into examining the algorithms, let us examine the data we want to use.
 
 \section{The Data}
 Our data set is a pre-processed set of spam from University of California Irvine,
@@ -101,11 +103,15 @@ Linear regression is a very simple algorithm, designed to handle data in very si
 dimensions. We ran into a lot of problems trying to implement this algorithm over
 a data set with over fifty features. After some trial and error, we decided that
 applying this algorithm to a feature set this complex didn't make a lot of sense.
-We were hitting a few percentage points in accuracy, and we believe that it was
-purely luck that we got that many. Instead of thoroughly investigating linear regression,
-we added support vector machine to our lineup of algorithms to examine. Before
-jumping into a support vector machine, we will now examine the next closest thing
-to linear regression, logistic regression.
+In order to do so, we would have to transform the data to something simplier, 
+therefore changing the fundamental problem. We do not have one variable corresponding
+to a dependent variable.
+
+After doing a quick implementation, we were hitting a few percentage points in accuracy,
+and we believe that it was purely luck that we got that many. Instead of thoroughly
+investigating linear regression, we added support vector machine to our lineup of
+algorithms to examine. Before jumping into a support vector machine, we will now 
+examine the next closest thing to linear regression, logistic regression.
 
 \section{Logistic Regression}
 Logistic regression is a form of classification that uses probability. We decided
