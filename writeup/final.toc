@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {I}Introduction}{2}
+\contentsline {section}{\numberline {II}The Data}{2}
+\contentsline {section}{\numberline {III}Linear Regression}{2}
+\contentsline {section}{\numberline {IV}Logistic Regression}{3}
+\contentsline {section}{\numberline {V}Support Vector Machine}{3}
+\contentsline {section}{\numberline {VI}Decision Tree}{3}
+\contentsline {section}{\numberline {VII}Conclusion}{3}
+\contentsline {section}{\numberline {VIII}Appendix A - Linux Structs}{4}
+\contentsline {section}{\numberline {IX}Bibliography}{4}
+\contentsline {section}{References}{4}
