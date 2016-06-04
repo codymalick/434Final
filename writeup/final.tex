@@ -1,5 +1,6 @@
 \documentclass[10pt,letterpaper,onecolumn,draftclsnofoot]{IEEEtran}
 \usepackage[margin=0.75in]{geometry}
+\usepackage{graphicx}
 \usepackage{listings}
 \usepackage{color}
 \usepackage{longtable}
@@ -87,8 +88,12 @@ following:
 \end{description}
 
 This data was great for a comparison set because we could look at the exact distribution
-of data, what kind of data it was, what the different attributes meant, etc. Now
-that we have the layout of the data, next we will examine our first algorithm,
+of data, what kind of data it was, what the different attributes meant, etc. Because we
+did not have a separate training set, we built our training set out of about 750 entries
+from the original training set of 4000. The training set contained both spam and non-spam
+classified entries.
+
+Now that we have the layout of the data, next we will examine our first algorithm,
 linear regression.
 
 \section{Linear Regression}
@@ -96,13 +101,44 @@ Linear regression is a very simple algorithm, designed to handle data in very si
 dimensions. We ran into a lot of problems trying to implement this algorithm over
 a data set with over fifty features. After some trial and error, we decided that
 applying this algorithm to a feature set this complex didn't make a lot of sense.
-We were hitting a few percetage points in accuracy, and we believe that it was
+We were hitting a few percentage points in accuracy, and we believe that it was
 purely luck that we got that many. Instead of thoroughly investigating linear regression,
 we added support vector machine to our lineup of algorithms to examine. Before
 jumping into a support vector machine, we will now examine the next closest thing
 to linear regression, logistic regression.
 
 \section{Logistic Regression}
+Logistic regression is a form of classification that uses probability. We decided
+to use logistic regression because it is a form of linear regression that is able
+to handle large amounts of features with relative accuracy, and often yields good
+results in a binary classification problem. 
+	\subsection{Implementation}
+	We implemented logistic regression by using the \texttt{scikit-learn} library
+	in python. \texttt{scikit-learn} is a great library that has several implementations
+	available and an extremely simple setup process. We used the \texttt{linear\_model.LogisticRegression}
+	module.
+	As far as execution, we first set it up with the appropriate features, and 
+	got surprisingly good results right out of the box. With default settings 
+	(no regularization, default penalty of l2), we achieved ~95\% accuracy on the
+	 training set, and ~88\% accuracy on the test set. We experimented with different
+	 regularization values from .1, high regularization, to 1.0, no regularization.
+	 
+	 \includegraphics[scale=.75]{../logistic/l2_penalty}
+	 
+	 
+	 Surprisingly, we only saw an increase in accuracy as regularization decreased. From
+	 this behavior we can extrapolate that our data has few to no outliers skewing the
+	 data in an unhelpful way. Next we tried applying l1 penalty instead of l2:
+	 
+	 
+	 \includegraphics[scale=.75]{../logistic/l1_penalty}
+	 
+	 
+	 With l1 penalty we see it takes quite a bit longer for the accuracy to peak, and 
+	 overall there is a lower overall accuracy of about 3\%. This is expected as l1 
+	 penalty is designed for data sets with sparse data, while l2 is better for larger,
+	 more complete data sets.
+	 
 \section{Support Vector Machine}
 \section{Decision Tree}
 
@@ -110,7 +146,7 @@ to linear regression, logistic regression.
 
 \clearpage
 \section{Appendix A - Linux Structs}
-All following structs have been pulled from the classroom text. \cite{robertlove2010}
+
 \begin{lstlisting}
 
 for future code samples
