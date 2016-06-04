@@ -54,7 +54,7 @@ the \texttt{Spambase Data Set}.\cite{spambase} The data set is comprised of the
 following:
 \begin{description}
   \item Number of Instances: 4601
-  \item Number of Attributes: 57
+  \item Number of Attributes: 58
   \begin{itemize}
     \item 48 continous real [0,100] attributes of type word\_freq\_WORD
     percentage of words in the e-mail that match WORD, i.e. 100 * (number of
@@ -114,16 +114,16 @@ to handle large amounts of features with relative accuracy, and often yields goo
 results in a binary classification problem. 
 	\subsection{Implementation}
 	We implemented logistic regression by using the \texttt{scikit-learn} library
-	in python. \texttt{scikit-learn} is a great library that has several implementations
-	available and an extremely simple setup process. We used the \texttt{linear\_model.LogisticRegression}
-	module.
-	As far as execution, we first set it up with the appropriate features, and 
-	got surprisingly good results right out of the box. With default settings 
-	(no regularization, default penalty of l2), we achieved ~95\% accuracy on the
-	 training set, and ~88\% accuracy on the test set. We experimented with different
-	 regularization values from .1, high regularization, to 1.0, no regularization.
+	in python. \texttt{Scikit-learn} is a great library that has several implementations
+	available and an extremely simple setup process. We used the \texttt{linear\_model}
+	\texttt{.LogisticRegression} module. As far as execution, we first set it up with
+	the appropriate features, and got surprisingly good results right out of the box.
+	With default settings (no regularization, default penalty of l2), we achieved
+	~95\% accuracy on the training set, and ~88\% accuracy on the test set. We
+	experimented with different regularization values from .1, high regularization,
+	to 1.0, no regularization.
 	 
-	 \includegraphics[scale=.75]{../logistic/l2_penalty}
+	 \includegraphics[scale=.75]{l2penalty}
 	 
 	 
 	 Surprisingly, we only saw an increase in accuracy as regularization decreased. From
@@ -131,7 +131,7 @@ results in a binary classification problem.
 	 data in an unhelpful way. Next we tried applying l1 penalty instead of l2:
 	 
 	 
-	 \includegraphics[scale=.75]{../logistic/l1_penalty}
+	 \includegraphics[scale=.75]{l1penalty}
 	 
 	 
 	 With l1 penalty we see it takes quite a bit longer for the accuracy to peak, and 
