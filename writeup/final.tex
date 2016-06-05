@@ -1,5 +1,8 @@
-\documentclass[10pt,letterpaper,onecolumn,draftclsnofoot]{IEEEtran}
-\usepackage[margin=0.75in]{geometry}
+\documentclass{article} % For LaTeX2e
+\usepackage{nips15submit_e,times}
+\usepackage{hyperref}
+\usepackage{url}
+%\documentstyle[nips14submit_09,times,art10]{article} % For LaTeX 2.09
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{color}
@@ -22,23 +25,40 @@
   tabsize=4
 }
 
+\title{CS 434, Final Project}
+
+
+\author{Garrett Smith \\
+\AND
+Cody Malick
+}
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to \LaTeX{} to determine where to break
+% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
+% puts 3 of 4 authors names on the first line, and the last on the second
+% line, try using \AND instead of \And before the third author name.
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\nipsfinalcopy % Uncomment for camera-ready version
+
 \begin{document}
-\begin{titlepage}
-  \title{CS 434 - Spring 2016 - Final Project Report}
-  \author{Garrett Smith, Cody Malick\\
-  \texttt{smithgar@oregonstate.edu} | \texttt{malickc@oregonstate.edu}}
-  \maketitle
-  \vspace*{4cm}
-  \begin{abstract}
-      \noindent In this report, we examine four different algorithms for machine
-      learning: linear regression, logistic regression, support vector machine,
-      and decision tree. We apply these four algorithms to the same problem, spam
-      classification, and examine how they perform, how they perform in different
-      conditions, and how they compare to each other.
 
-  \end{abstract}
-\end{titlepage}
 
+\maketitle
+
+\begin{abstract}
+  \noindent In this report, we examine four different algorithms for machine
+  learning: linear regression, logistic regression, support vector machine,
+  and decision tree. We apply these four algorithms to the same problem, spam
+  classification, and examine how they perform, how they perform in different
+  conditions, and how they compare to each other.
+\end{abstract}
+\clearpage
 \tableofcontents
 \clearpage
 \section{Introduction}
@@ -104,21 +124,21 @@ Linear regression is a very simple algorithm, designed to handle data in very si
 dimensions. We ran into a lot of problems trying to implement this algorithm over
 a data set with over fifty features. After some trial and error, we decided that
 applying this algorithm to a feature set this complex did not make a lot of sense.
-In order to do so, we would have to transform the data into something more simple, 
+In order to do so, we would have to transform the data into something more simple,
 therefore changing the fundamental problem. We do not have one variable corresponding
 to a dependent variable.
 
 After doing a quick implementation, we were hitting a few percentage points in accuracy,
 and we believe that it was purely luck that we got that many. Instead of thoroughly
 investigating linear regression, we added support vector machine to our lineup of
-algorithms to examine. Before jumping into a support vector machine, we will now 
+algorithms to examine. Before jumping into a support vector machine, we will now
 examine the next closest thing to linear regression, logistic regression.
 
 \section{Logistic Regression}
 Logistic regression is a form of classification that uses probability. We decided
 to use logistic regression because it is a form of linear regression that is able
 to handle large amounts of features with relative accuracy, and often yields good
-results in a binary classification problem. 
+results in a binary classification problem.
 	\subsection{Implementation}
 	We implemented logistic regression by using the \texttt{scikit-learn} library
 	in python. \texttt{Scikit-learn} is a great library that has several implementations
@@ -129,30 +149,30 @@ results in a binary classification problem.
 	~95\% accuracy on the training set, and ~88\% accuracy on the test set. We
 	experimented with different regularization values from .1, high regularization,
 	to 1.0, no regularization.
-	 
+
 	 \includegraphics[scale=.75]{l2penalty}
-	 
-	 
+
+
 	 Surprisingly, we only saw an increase in accuracy as regularization decreased. From
 	 this behavior we can extrapolate that our data has few to no outliers skewing the
 	 data in an unhelpful way. Next we tried applying l1 penalty instead of l2:
-	 
-	 
+
+
 	 \includegraphics[scale=.75]{l1penalty}
-	 
-	 
-	 With l1 penalty we see it takes quite a bit longer for the accuracy to peak, and 
-	 overall there is a lower overall accuracy of about 3\%. This is expected as l1 
+
+
+	 With l1 penalty we see it takes quite a bit longer for the accuracy to peak, and
+	 overall there is a lower overall accuracy of about 3\%. This is expected as l1
 	 penalty is designed for data sets with sparse data, while l2 is better for larger,
 	 more complete data sets.
-	 
+
 \section{Support Vector Machine}
 \section{Decision Tree}
 The decision tree algorithm deals well with both discrete and continuous features. Aside from the class label all of the features in our data set were continuous. This made decision tree a good choice for spam classification. Without any limits the decision tree will train a tree that perfectly classifies all of the training examples. While this tree perfectly classifies the training set, it leads to over fitting with other data and a loss of accuracy. To combat this we tried limiting two different parts of the decision tree, tree depth and the number of leaf nodes on the tree.
 
 \subsection{Implementation}
 We used the \texttt{DecisionTreeClassifier} module of the \texttt{scikit-learn} library in python to build our decision trees. The library let us limit the tree depth and number of leaf nodes so we could tune the decision tree to try to get the best accuracy. Before we did any tuning we tested the accuracy of the decision tree when built from the training data when no limits were placed on how big the tree could be. The accuracy on the testing data using a tree that was perfectly fitted to the training data was 85.63\%. By limiting the depth of the tree we were able to get some improvement and the best accuracy we obtained on the testing data was 87.87\% with a tree where the maximum depth was 135. Next we tried limiting the number of leaf nodes on the tree. A tree with only 24 leaf nodes gave us our best accuracy of 88.09\%. By limiting both the depth of the tree and the number of leaf nodes we were able to learn a decision tree that had 89.37\% accuracy. The best tree was learned by limiting the depth of the tree to 6 and the number of leaf nodes to 28.
- 
+
 \subsection{Limiting Tree Depth}
 By limiting the depth of the tree to between 2 and 1000 we limited the number of decisions that it could have, and attempted to reduce over fitting the training data that way. The best accuracy on testing data we were able to obtain by only limiting depth was 87.87\% accuracy with a tree that was of depth 135. Below is a plot of accuracy versus tree depth.
 
