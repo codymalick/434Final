@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.6.3)  3 JUN 2016 22:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.4.3)  5 JUN 2016 07:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./final.tex
 (./final.tex
-LaTeX2e <2016/03/31>
+LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (./IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
@@ -263,23 +263,31 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \tabu@vleads=\box38
 \tabu@cellskip=\skip50
 )
+(c:/texlive/2015/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count118
+\float@exts=\toks22
+\float@box=\box39
+\@float@everytoks=\toks23
+\@floatcapt=\box40
+)
 (c:/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) (./final.aux)
 \openout1 = `final.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 -- Lines per column: 38 (approximate, difference = 8.56499pt).
 *geometry* driver: auto-detecting
@@ -318,17 +326,17 @@ LaTeX Font Info:    ... okay on input line 24.
 
 (c:/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count118
+\scratchcounter=\count119
 \scratchdimen=\dimen154
-\scratchbox=\box39
-\nofMPsegments=\count119
-\nofMParguments=\count120
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count121
+\scratchbox=\box41
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count122
 \MPscratchDim=\dimen155
-\MPnumerator=\count122
-\makeMPintoPDFobject=\count123
-\everyMPtoPDFconversion=\toks23
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks25
 ) (c:/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -373,8 +381,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count124
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 29.
+\c@lstlisting=\count125
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 30.
 
 (c:/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -391,46 +399,102 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1] [2
 
 ]
-Overfull \hbox (58.49498pt too wide) in paragraph at lines 116--125
-\OT1/ptm/m/n/10 that has sev-eral im-ple-men-ta-tions avail-able and an ex-trem
-ely sim-ple setup pro-cess. We used the \OT1/pcr/m/n/10 linear_model.LogisticRe
-gression
- []
+Package epstopdf Info: Source file: <l2penalty.eps>
+(epstopdf)                    date: 2016-06-05 02:13:01
+(epstopdf)                    size: 2915669 bytes
+(epstopdf)             Output file: <l2penalty-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-06-05 02:39:30
+(epstopdf)                    size: 32274 bytes
+(epstopdf)             Command: <repstopdf --outfile=l2penalty-eps-converted-to
+.pdf l2penalty.eps>
+(epstopdf)             \includegraphics on input line 133.
+Package epstopdf Info: Output file is already uptodate.
 
-<../logistic/l2_penalty.png, id=16, 578.16pt x 427.1157pt>
-File: ../logistic/l2_penalty.png Graphic file (type png)
+<l2penalty-eps-converted-to.pdf, id=16, 578.16pt x 427.5975pt>
+File: l2penalty-eps-converted-to.pdf Graphic file (type pdf)
 
-<use ../logistic/l2_penalty.png>
-Package pdftex.def Info: ../logistic/l2_penalty.png used on input line 126.
-(pdftex.def)             Requested size: 433.61893pt x 320.33598pt.
+<use l2penalty-eps-converted-to.pdf>
+Package pdftex.def Info: l2penalty-eps-converted-to.pdf used on input line 133.
 
-<../logistic/l1_penalty.png, id=18, 578.16pt x 427.1157pt>
-File: ../logistic/l1_penalty.png Graphic file (type png)
+(pdftex.def)             Requested size: 433.61893pt x 320.69733pt.
+ [3 <./l2penalty-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <l1penalty.eps>
+(epstopdf)                    date: 2016-06-05 02:13:01
+(epstopdf)                    size: 2915669 bytes
+(epstopdf)             Output file: <l1penalty-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-06-05 02:39:32
+(epstopdf)                    size: 33014 bytes
+(epstopdf)             Command: <repstopdf --outfile=l1penalty-eps-converted-to
+.pdf l1penalty.eps>
+(epstopdf)             \includegraphics on input line 141.
+Package epstopdf Info: Output file is already uptodate.
 
-<use ../logistic/l1_penalty.png>
-Package pdftex.def Info: ../logistic/l1_penalty.png used on input line 134.
-(pdftex.def)             Requested size: 433.61893pt x 320.33598pt.
- [3 <../logistic/l2_penalty.png>] [4 <../logistic/l1_penalty.png>] (./final.bbl
-) [5
+<l1penalty-eps-converted-to.pdf, id=24, 578.16pt x 427.5975pt>
+File: l1penalty-eps-converted-to.pdf Graphic file (type pdf)
+
+<use l1penalty-eps-converted-to.pdf>
+Package pdftex.def Info: l1penalty-eps-converted-to.pdf used on input line 141.
+
+(pdftex.def)             Requested size: 433.61893pt x 320.69733pt.
+ [4 <./l1penalty-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <accuracy-vs-depth.eps>
+(epstopdf)                    date: 2016-06-05 06:19:30
+(epstopdf)                    size: 2908189 bytes
+(epstopdf)             Output file: <accuracy-vs-depth-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-06-05 06:20:17
+(epstopdf)                    size: 132325 bytes
+(epstopdf)             Command: <repstopdf --outfile=accuracy-vs-depth-eps-conv
+erted-to.pdf accuracy-vs-depth.eps>
+(epstopdf)             \includegraphics on input line 160.
+Package epstopdf Info: Output file is already uptodate.
+
+<accuracy-vs-depth-eps-converted-to.pdf, id=31, 578.16pt x 431.6125pt>
+File: accuracy-vs-depth-eps-converted-to.pdf Graphic file (type pdf)
+
+<use accuracy-vs-depth-eps-converted-to.pdf>
+Package pdftex.def Info: accuracy-vs-depth-eps-converted-to.pdf used on input l
+ine 160.
+(pdftex.def)             Requested size: 433.61893pt x 323.70857pt.
+Package epstopdf Info: Source file: <accuracy-vs-nodes.eps>
+(epstopdf)                    date: 2016-06-05 06:19:46
+(epstopdf)                    size: 2908189 bytes
+(epstopdf)             Output file: <accuracy-vs-nodes-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-06-05 06:20:19
+(epstopdf)                    size: 122614 bytes
+(epstopdf)             Command: <repstopdf --outfile=accuracy-vs-nodes-eps-conv
+erted-to.pdf accuracy-vs-nodes.eps>
+(epstopdf)             \includegraphics on input line 167.
+Package epstopdf Info: Output file is already uptodate.
+
+<accuracy-vs-nodes-eps-converted-to.pdf, id=32, 578.16pt x 431.6125pt>
+File: accuracy-vs-nodes-eps-converted-to.pdf Graphic file (type pdf)
+
+<use accuracy-vs-nodes-eps-converted-to.pdf>
+Package pdftex.def Info: accuracy-vs-nodes-eps-converted-to.pdf used on input l
+ine 167.
+(pdftex.def)             Requested size: 433.61893pt x 323.70857pt.
+ [5 <./accuracy-vs-depth-eps-converted-to.pdf>] [6 <./accuracy-vs-nodes-eps-con
+verted-to.pdf>] (./final.bbl)
+[7
 
 ] (./final.aux) ) 
 Here is how much of TeX's memory you used:
- 5093 strings out of 493027
- 77374 string characters out of 6137685
- 171094 words of memory out of 5000000
- 8584 multiletter control sequences out of 15000+600000
+ 5172 strings out of 493033
+ 78561 string characters out of 6137749
+ 172365 words of memory out of 5000000
+ 8640 multiletter control sequences out of 15000+600000
  36204 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,7n,40p,240b,1048s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,40p,866b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015
 /texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2015/texmf-dist/font
 s/type1/urw/times/utmb8a.pfb><c:/texlive/2015/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb><c:/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on final.pdf (6 pages, 111773 bytes).
+Output written on final.pdf (8 pages, 380697 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 68 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

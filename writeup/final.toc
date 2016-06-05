@@ -5,7 +5,10 @@
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Implementation}{3}
 \contentsline {section}{\numberline {V}Support Vector Machine}{4}
 \contentsline {section}{\numberline {VI}Decision Tree}{4}
-\contentsline {section}{\numberline {VII}Conclusion}{4}
-\contentsline {section}{\numberline {VIII}Appendix A - Linux Structs}{5}
-\contentsline {section}{\numberline {IX}Bibliography}{5}
-\contentsline {section}{References}{5}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}Implementation}{4}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}}Limiting Tree Depth}{5}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-C}}Limiting Leaf Nodes}{5}
+\contentsline {section}{\numberline {VII}Conclusion}{6}
+\contentsline {section}{\numberline {VIII}Appendix A - Linux Structs}{7}
+\contentsline {section}{\numberline {IX}Bibliography}{7}
+\contentsline {section}{References}{7}
