@@ -7,7 +7,7 @@ Database: https://archive.ics.uci.edu/ml/datasets/Spambase
 
 import numpy as np
 from sklearn import tree
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 
 def DecisionTree(training, testing, depth, nodes):
     X = []
@@ -189,11 +189,10 @@ def main():
     
     results = []
     best = 0
-    count = 0
     depth = 0
     nodes = 0
-    for i in range(2, 1000):
-        for j in range(2, 1000):
+    for i in range(2, 100):
+        for j in range(2, 100):
             accuracy = DecisionTree(training, testing, i, j)
             results.append([i, j, accuracy])
             if accuracy > best:
