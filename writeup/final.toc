@@ -5,9 +5,9 @@
 \contentsline {subsection}{\numberline {4.1}Implementation}{4}{subsection.4.1}
 \contentsline {section}{\numberline {5}Support Vector Machine}{5}{section.5}
 \contentsline {section}{\numberline {6}Decision Tree}{5}{section.6}
-\contentsline {subsection}{\numberline {6.1}Implementation}{5}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.1}Implementation}{6}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Limiting Tree Depth}{6}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Limiting Leaf Nodes}{6}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.3}Limiting Leaf Nodes}{7}{subsection.6.3}
 \contentsline {section}{\numberline {7}Conclusion}{7}{section.7}
 \contentsline {section}{\numberline {8}Appendix A - Linux Structs}{8}{section.8}
 \contentsline {section}{\numberline {9}Bibliography}{8}{section.9}
