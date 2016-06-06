@@ -17,8 +17,8 @@ def LinearRegression(training, testing):
     X = training[:,0:56] # Data
     y = training[:,57] # Class Label
     Z = testing[:,0:56] # Testing set
-    linear = svm.LinearSVC()
-    linear.fit(X,y)
+    linear = svm.SVC()
+
 #    
 #    print(linear.decision_function)
 #    
@@ -27,18 +27,22 @@ def LinearRegression(training, testing):
     testing_results_x = []
     testing_results_y = []
     
-    c = 1.01
+    c = 3.01
     p = 'l2'
-    
-    for j in range(0,100): 
+    degree = 3
+    best = 0
+    best_c = 0
+    for j in range(0,300): 
         c -= .01
 #        print(linear.get_params())
-        linear.set_params(**{'C':c,'penalty':p})
+        linear.set_params(**{'C':c, 'degree':degree})
+        linear.fit(X,y)
         result = linear.predict(X)
         
         correct = 0
         incorrect = 0
-        
+        tr_best = 0
+        tr_best_c = 0
         #print("Training data results:")
         for i in range(0, len(result)):
             if(result[i] == training[i][57]):
@@ -50,6 +54,9 @@ def LinearRegression(training, testing):
         #print("Accuracy: " + str(correct/(correct+incorrect)))    
         training_results_x.append(c)
         training_results_y.append(correct/(correct+incorrect))
+        if (correct/(correct+incorrect)) > best:
+            tr_best = correct/(correct+incorrect)
+            tr_best_c = c
         
         
 #        linear.fit(X,y)
@@ -63,11 +70,15 @@ def LinearRegression(training, testing):
                 correct += 1
             else:
                 incorrect += 1
-        #print("Correct: " + str(correct) + "| Incorrect: " + str(incorrect))
-        #print("Accuracy: " + str(correct/(correct+incorrect)))    
+        print("Correct: " + str(correct) + "| Incorrect: " + str(incorrect))
+        print("Accuracy: " + str(correct/(correct+incorrect)))    
         testing_results_x.append(c)
         testing_results_y.append(correct/(correct+incorrect))
+        if (correct/(correct+incorrect)) > best:
+            best = correct/(correct+incorrect)
+            best_c = c
 
+    print("Best values: Accuracy: ", best, " C value: ", best_c)
     plt.plot(training_results_x, training_results_y, 'b-')
     plt.plot(testing_results_x, testing_results_y, 'r-')
 #        
