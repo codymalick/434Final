@@ -8,5 +8,5 @@
 \contentsline {subsection}{\numberline {6.2}Limiting Tree Depth}{6}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}Limiting Leaf Nodes}{6}{subsection.6.3}
 \contentsline {subsection}{\numberline {6.4}Optimal Tree}{7}{subsection.6.4}
-\contentsline {section}{\numberline {7}Conclusion}{8}{section.7}
-\contentsline {section}{\numberline {8}Bibliography}{9}{section.8}
+\contentsline {section}{\numberline {7}Conclusion}{7}{section.7}
+\contentsline {section}{\numberline {8}Bibliography}{8}{section.8}

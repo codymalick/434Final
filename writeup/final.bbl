@@ -27,4 +27,19 @@ E.~R. Mark~Hopkins. (1999, jul) Spambase data set. [Online]. Available:
   \url{https://archive.ics.uci.edu/ml/datasets/Spambase}
 \BIBentrySTDinterwordspacing
 
+\bibitem{sklearn}
+\BIBentryALTinterwordspacing
+ [Online]. Available: \url{http://scikit-learn.org/stable/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{pyplot}
+\BIBentryALTinterwordspacing
+ [Online]. Available: \url{http://matplotlib.org/api/pyplot_api.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{graphviz}
+\BIBentryALTinterwordspacing
+ [Online]. Available: \url{http://www.graphviz.org/}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

@@ -188,18 +188,18 @@ on the tree.
 
 \subsection{Implementation}
 We used the \texttt{DecisionTreeClassifier} module of the \texttt{scikit-learn}
-library in python to build our decision trees. The library let us limit the tree
+library in python to build our decision trees~\cite{sklearn}. The library let us limit the tree
 depth and number of leaf nodes so we could tune the decision tree to try to get
 the best accuracy. Before we did any tuning we tested the accuracy of the decision
-tree when built from the training data when no limits were placed on how big the
+tree when learned from the training data when no limits were placed on how big the
 tree could be. The accuracy on the testing data using a tree that was perfectly
 fitted to the training data was 85.63\%. By limiting the depth of the tree we were
-able to get some improvement and the best accuracy we obtained on the testing data
+able to get some improvement when learning decision trees and the best accuracy we obtained on the testing data
 was 87.87\% with a tree where the maximum depth was 135. Next we tried limiting
 the number of leaf nodes on the tree. A tree with only 24 leaf nodes gave us our
 best accuracy of 88.09\%. By limiting both the depth of the tree and the number
 of leaf nodes we were able to learn a decision tree that had 89.37\% accuracy.
-The best tree was learned by limiting the depth of the tree to 6 and the number
+The best tree was learned by limiting the depth of the tree to 6 and the maximum number
 of leaf nodes to 28.
 
 \subsection{Limiting Tree Depth}
@@ -207,7 +207,7 @@ By limiting the depth of the tree to between 2 and 1000 we limited the number of
 decisions that it could have, and attempted to reduce over fitting the training
 data that way. The best accuracy on testing data we were able to obtain by only
 limiting depth was 87.87\% accuracy with a tree that was of depth 135. Below is
-a plot of accuracy versus tree depth.
+a plot of accuracy versus tree depth generated using the Matplotlib pyplot\cite{pyplot} library.
 
 \begin{figure}[H]
 \includegraphics[scale=.5]{accuracy-vs-depth}
@@ -222,12 +222,7 @@ the tree to 24 leaf nodes. The trees with leaf node limits of around that of
 the most accurate tree were also more accurate than many of the other trees.
 This was an interesting result because it means that with fairly few decisions
 we were able to correctly classify a large portion of the emails. Below is a
-plot of accuracy versus number of leaf nodes.
-\begin{figure}[H]
-\includegraphics[scale=.5]{accuracy-vs-nodes}
-\caption{Accuracy vs. tree depth}
-\end{figure}
-
+plot of accuracy versus number of leaf nodes generated using the Matplotlib pyplot\cite{pyplot} library.
 \begin{figure}[H]
 \includegraphics[scale=.5]{accuracy-vs-nodes}
 \caption{Accuracy vs. tree depth}
@@ -235,7 +230,7 @@ plot of accuracy versus number of leaf nodes.
 
 
 \subsection{Optimal Tree}
-By limiting both the depth of the tree and the number of leaf nodes we were able to learn a tree with an accuracy of 89.37\% on the testing data.
+By limiting both the depth of the tree and the number of leaf nodes we were able to learn a tree with an accuracy of 89.37\% on the testing data. The learned tree has a depth of 6 and 28 leaf nodes. We used Graphviz\cite{graphviz} to generate the picture of the tree in figure 4.
 \begin{figure}[H]
 \includegraphics[scale=.14]{tree}
 \caption{Optimal Tree}
@@ -246,10 +241,10 @@ Overall, support vector machine and decision tree were very close as far as accu
 We expected support vector machine to handle the data better because SVMs handle
 larger quantities of features better, and the SVM was not linear. This would lead
 to the expected result of a higher level of accuracy. Decision tree, given an
-arbitrarily complex decision boundry, can achieve very high accuracy as well. Our
+arbitrarily complex decision boundary, can achieve very high accuracy as well. Our
 experiments boil down to one thing: choosing the proper algorithm for your
 problem and data. Decision tree and SVM were great choices for the data, and while
-logistic regression worked, wasn't quite as good as the either of the former.
+logistic regression worked, it was not as good as the either of the former.
 
 \clearpage
 
