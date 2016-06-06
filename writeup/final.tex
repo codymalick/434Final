@@ -140,7 +140,8 @@ to use logistic regression because it is a form of linear regression that is abl
 to handle large amounts of features with relative accuracy, and often yields good
 results in a binary classification problem.
 
-We implemented logistic regression by using the \texttt{scikit-learn} library
+We implemented logistic regression by using the \texttt{scikit-learn}\cite{sklearn}
+library
 in python. \texttt{Scikit-learn} is a great library that has several implementations
 available and an extremely simple setup process. We used the \texttt{linear\_model}
 \texttt{.LogisticRegression} module. As far as execution, we first set it up with
@@ -234,21 +235,21 @@ plot of accuracy versus number of leaf nodes.
 
 
 \subsection{Optimal Tree}
-By limiting both the depth of the tree and the number of leaf nodes we were able to learn a tree with an accuracy of 89.37\% on the testing data. 
+By limiting both the depth of the tree and the number of leaf nodes we were able to learn a tree with an accuracy of 89.37\% on the testing data.
 \begin{figure}[H]
 \includegraphics[scale=.14]{tree}
 \caption{Optimal Tree}
 \end{figure}
 
 \section{Conclusion}
-Overall, support vector machine and decision tree tied as far as accuracy. We expected
-support vector machine to handle the data better because SVMs handle larger quantities
-of features better, and the SVM was not linear. This would lead to the expect result
-of a higher level of accuracy. Decision tree, given an arbitrarily complex decision
-boundry, can achieve very high accuracy as well. Our experiments boil down to one
-thing: choosing the proper algorithm for your problem and data. Decision tree
-and SVM were great choices for the data, and while logistic regression worked, wasn't
-quite as good as the former.
+Overall, support vector machine and decision tree were very close as far as accuracy.
+We expected support vector machine to handle the data better because SVMs handle
+larger quantities of features better, and the SVM was not linear. This would lead
+to the expected result of a higher level of accuracy. Decision tree, given an
+arbitrarily complex decision boundry, can achieve very high accuracy as well. Our
+experiments boil down to one thing: choosing the proper algorithm for your
+problem and data. Decision tree and SVM were great choices for the data, and while
+logistic regression worked, wasn't quite as good as the either of the former.
 
 \clearpage
 
