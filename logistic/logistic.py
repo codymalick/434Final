@@ -20,7 +20,7 @@ def LogisticRegression(training, testing):
     
     # Function Parameter set
     logistic = linear_model.LogisticRegression()
-    logistic.fit(X,y)
+
 
     training_results_x = []
     training_results_y = []
@@ -28,11 +28,12 @@ def LogisticRegression(training, testing):
     testing_results_y = []
         
     c = 1.01
-    p = 'l2'
+    p = 'l1'
     for j in range(0,100):
         c -= .01
         print(logistic.get_params())
-        logistic.set_params(**{'C':c,'penalty':p})        
+        logistic.set_params(**{'C':c,'penalty':p})
+        logistic.fit(X,y)
         result = logistic.predict(X)
     
         correct = 0
