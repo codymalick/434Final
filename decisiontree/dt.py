@@ -50,7 +50,7 @@ def DecisionTree(training, testing, depth, nodes):
             incorrect += 1
     #print("Correct: " + str(correct) + "| Incorrect: " + str(incorrect))
     #print("Accuracy: " + str(correct/(correct+incorrect)))   
-    return correct/(correct+incorrect)
+    return correct/(correct+incorrect), dt
 
 def DecisionTreeDepth(training, testing, depth):
     X = []
@@ -191,15 +191,19 @@ def main():
     best = 0
     depth = 0
     nodes = 0
+
     for i in range(2, 100):
         for j in range(2, 100):
-            accuracy = DecisionTree(training, testing, i, j)
+            accuracy, dt = DecisionTree(training, testing, i, j)
             results.append([i, j, accuracy])
             if accuracy > best:
                 best = accuracy
                 depth = i
                 nodes = j
-    
+                best_dt = dt
+                
+                
+    tree.export_graphviz(best_dt, out_file='best_dt.dot')
     print("Best result of limiting depth and leaf nodes")
     print("Accuracy: ", best, " depth: ", depth, " leaf nodes: ", nodes)
     print("Unlimited accuracy: ", DecisionTreeLeaf(training, testing, 0))
