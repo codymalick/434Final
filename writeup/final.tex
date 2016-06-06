@@ -139,7 +139,7 @@ Logistic regression is a form of classification that uses probability. We decide
 to use logistic regression because it is a form of linear regression that is able
 to handle large amounts of features with relative accuracy, and often yields good
 results in a binary classification problem.
-\subsection{Implementation}
+
 We implemented logistic regression by using the \texttt{scikit-learn} library
 in python. \texttt{Scikit-learn} is a great library that has several implementations
 available and an extremely simple setup process. We used the \texttt{linear\_model}
@@ -150,7 +150,7 @@ With default settings (regularization of l2, no penalty), we achieved
 experimented with different penalty values C from .1, high penalty,
 to 1.0, no penalty.
 
- \includegraphics[scale=.5]{l2penalty}
+ \includegraphics[scale=.5]{l2_penalty-fixed}
 
 
  Surprisingly, we only saw an increase in accuracy as penalty decreased. From
@@ -158,7 +158,7 @@ to 1.0, no penalty.
  data in an unhelpful way. Next we tried applying l1 regularization instead of l2:
 
 
- \includegraphics[scale=.5]{l1penalty}
+ \includegraphics[scale=.5]{l1_penalty-fixed}
 
 
  With l1 regularization we see it takes quite a bit longer for the accuracy to peak, and
@@ -209,7 +209,7 @@ limiting depth was 87.87\% accuracy with a tree that was of depth 135. Below is
 a plot of accuracy versus tree depth.
 
 \begin{figure}[H]
-\includegraphics[scale=.75]{accuracy-vs-depth}
+\includegraphics[scale=.5]{accuracy-vs-depth}
 \caption{Accuracy vs. number of leaf nodes}
 \end{figure}
 
@@ -229,15 +229,16 @@ plot of accuracy versus number of leaf nodes.
 
 
 \section{Conclusion}
-Overall,
+Overall, support vector machine and decision tree tied as far as accuracy. We expected
+support vector machine to handle the data better because SVMs handle larger quantities
+of features better, and the SVM was not linear. This would lead to the expect result
+of a higher level of accuracy. Decision tree, given an arbitrarily complex decision
+boundry, can achieve very high accuracy as well. Our experiments boil down to one
+thing: choosing the proper algorithm for your problem and data. Decision tree
+and SVM were great choices for the data, and while logistic regression worked, wasn't
+quite as good as the former.
+
 \clearpage
-\section{Appendix A - Linux Structs}
-
-\begin{lstlisting}
-
-for future code samples
-
-\end{lstlisting}
 
 \section{Bibliography}
 \bibliographystyle{IEEEtran}
